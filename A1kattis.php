@@ -18,10 +18,10 @@ if($test) {
         return;
     }
     $pictures = array();
-    $result = "";
+    //$result = "";
     $firstTime = true;
     while(true) {
-        fscanf($fp1, '$s', $lines);
+        fscanf($fp1, '%d', $lines);
         if ($lines == 0) {
             break;
         }
@@ -45,14 +45,14 @@ if($test) {
             }
             $sum = 0;
             for ($j = 0; $j < sizeof($data[$i]) - 1; $j++) {
-                $sum += $data[$i][$j+1];
+                $sum += (int)$data[$i][$j+1];
                 if ($j%2 == 0) {
                     $currKey = $key;
                 } else {
                     $currKey = $altKey;
                 }
                 for ($k = 0; $k < $data[$i][$j+1]; $k++) {
-                    $str+=$currKey;
+                    $str.=$currKey;
                 }
             }
             if (!$maxsum == -1) {
@@ -63,6 +63,7 @@ if($test) {
             else {
                 $maxsum = $sum;
             }
+            echo "$str \n";
             array_push($pictures, $str);
         }
         if($error) {
@@ -73,9 +74,9 @@ if($test) {
         }
     }
     for ($i = 0; $i<sizeof($pictures); $i++) {
-        $result+=$pictures[$i] + "\n";
+        $result=$pictures[$i]."\n";
+        fprintf($fp2, "%s", $result);
     }
-    fprintf($fp2, "%0.0f\n", $result);
 	echo "done.";
 }
 else {
