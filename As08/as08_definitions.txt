@@ -1,25 +1,25 @@
-base class: 
+base class: A class that other classes are derived from.
 class: Programming that defines the structure of objects, with variables and methods inside of it.
-class member:
+class member: A variable or method within a class.
 constructor: A method that defines the creation of an object
 data members: Another word for properties
-derived class:
-dynamic dispatching:
-encapsulation:
+derived class: A class that is created from another class, through inheritance or interfacing.
+dynamic dispatching: The selection of classes or methods to use when necessary to reduce code complexity.
+encapsulation: Setting attributes and methods visibility in order to protect data from being corrupted.
 getters and setters: Allows for modification of private components, and allows to set parameters for ineligible values
 inheritance: Allows for another class's properties to apply to the object, unless overridden.
 instance: Another name for an Object
-instantiate:
+instantiate: The action of creation of a new instance of an object.
 IDE: A programming environment with tools to help streamline programming.
-Interface:
-Magic Methods:
+Interface: Defining required methods and classes for a potential subclass without defining how those functions work.
+Magic Methods: Special functions that are used by every object, however can be overwritten. Usually identifiable with underscores.
 Methods: A task that is repeated multiple times within a program, and is separated out from the main program to make it easier to repeat without compromising code length.
 Naming Conventions: A set of guidelines that define how characters should be used with regards to naming classes, variables, and 
 Objects: An individual version of a class
-Polymorphism: The idea that objects can be classified as multiple different things
+Polymorphism: The idea that objects can be classified as multiple different classes
 Properties: Attributes that store and modify the data involved in an object
-Refactoring:
-Skeleton:
+Refactoring: Restructuring existing code to better work with new objectives.
+Skeleton: A style of computer programming based on simple high-level program structures and so called dummy code. (https://en.wikipedia.org/wiki/Skeleton_(computer_programming))
 Static: A property that all instances of a class share
 Subclass: A class that inherits from another class.
 Superclass: A class that many classes inherit from.
