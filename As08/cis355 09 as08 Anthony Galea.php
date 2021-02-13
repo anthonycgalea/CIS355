@@ -9,7 +9,7 @@
 *   Fundamentals of Web Development
 */
 
-error_reporting(0);
+//error_reporting(0);
 
 // Implement class Artist
 class Artist {
@@ -71,59 +71,6 @@ class Artist {
 	}
 }
 
-// Instantiate class Artist: 
-// object "picasso"
-$picasso = new Artist(
-  "Pablo", 
-  "Picasso", 
-  "Malaga", 
-  "October 25 1881",
-  "April 8 1973"
-); 
-
-echo Artist::$artistCount . "<br>";
-
-
-$picasso2 = new Artist(
-  "Jim Bob", 
-  "Picasso", 
-  "Malaga", 
-  "October 25 1881",
-  "April 8 1973"
-); 
-
-echo Artist::$artistCount . "<br>";
-
-
-// var_dump($picasso);
-
-echo $picasso->__toString();
-
-$picasso->setFirstName("Fred");
-
-echo $picasso->__toString(); 
-
-/*
-$picasso->firstName = "Pablo";
-$picasso->lastName  = "Picasso";
-$picasso->birthCity = "Malaga";
-$picasso->birthDate = "October 25 1881";
-$picasso->deathDate = "April 8 1973";
-*/
-
-// Create function to print Artist objects
-/*
-function printArtist($artistObject) {
-	echo $artistObject->firstName . " " 
-	. $artistObject->lastName . " " 
-	. $artistObject->birthCity . " " 
-	. $artistObject->birthDate . " " 
-	. $artistObject->deathDate ;
-}
-*/
-// Actually print the "picasso" object
-// printArtist ($picasso);
-
 class Art {
 	
 	private $name;
@@ -136,9 +83,7 @@ class Art {
 		$this->artist = $artist;
 		$this->createdYear = $createdYear;
 	  }
-	public function __toString () {
-		echo "Art name: " . $this->name;
-	}
+
 	public function getName() {
 		return $this->name;
 	}
@@ -159,39 +104,99 @@ class Art {
 	public function setCreatedYear($year) {
 		$this->createdYear = $year;
 	}
+
+	public function __toString() {
+		return "Art title:\t" . $this->name . "\nArtist:\t". $this->artist->__toString() . "\nYear created:\t" . $this->yearCreated;
+	}
+
+
 }
 
 class Painting extends Art {
 	
 	public $medium;
-
+	function __construct($name, 
+	$artist, $createdYear, $medium) {
+	  $this->name = $name;
+	  $this->artist = $artist;
+	  $this->createdYear = $createdYear;
+	  $this->medium = $medium;
+	}
+	
 	public function getMedium() {
 		return $this->medium;
 	}
 	public function setMedium($medium) {
 		$this->medium = $medium;
 	}
-	
+	public function __toString() {
+		return "Painting title:\t" . $this->name . "\nArtist:\t". $this->artist->__toString() . "\nYear created:\t" . $this->createdYear . "\nMedium:\t" . $this->medium;
+	}
 }
 
 class Sculpture extends Art {
 	
 	public $weight;
 
+	function __construct($name, 
+	$artist, $createdYear, $weight) {
+	  $this->name = $name;
+	  $this->artist = $artist;
+	  $this->createdYear = $createdYear;
+	  $this->weight = $weight;
+	}
 	public function getWeight() {
 		return $this->weight;
 	}
 	public function setWeight($weight) {
 		$this->weight = $weight;
 	}
+
+	public function __toString() {
+		return "Sculpture title:\t" . $this->name . "\nArtist:\t". $this->artist->__toString() . "\nYear created:\t" . $this->createdYear . "\nWeight:\t" . $this->weight;
+	}
 	
 }
-$guernica = new Painting ("guernica", $picasso, 1934);
-$guernica->medium = "oil";
 
-echo "<br><br>";
+// Instantiate class Artist: 
+// object "picasso"
+$picasso = new Artist(
+  "Pablo", 
+  "Picasso", 
+  "Malaga", 
+  "October 25 1881",
+  "April 8 1973"
+); 
 
-var_dump($guernica); 
+
+
+$picasso2 = new Artist(
+  "Jim Bob", 
+  "Picasso", 
+  "Malaga", 
+  "October 25 1881",
+  "April 8 1973"
+); 
+
+
+
+// var_dump($picasso);
+
+echo $picasso->__toString();
+
+$picasso->setFirstName("Fred");
+
+echo $picasso->__toString(); 
+
+$guernica = new Painting ("guernica", $picasso, 1934, "oil");
+
+echo $guernica->__toString();
+$thinker = new Sculpture ("The Thinker", $picasso2, 1903, 2545);
+
+echo $thinker->__toString();
+
+
+
 
 
 

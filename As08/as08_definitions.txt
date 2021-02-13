@@ -1,0 +1,27 @@
+base class: 
+class: Programming that defines the structure of objects, with variables and methods inside of it.
+class member:
+constructor: A method that defines the creation of an object
+data members: Another word for properties
+derived class:
+dynamic dispatching:
+encapsulation:
+getters and setters: Allows for modification of private components, and allows to set parameters for ineligible values
+inheritance: Allows for another class's properties to apply to the object, unless overridden.
+instance: Another name for an Object
+instantiate:
+IDE: A programming environment with tools to help streamline programming.
+Interface:
+Magic Methods:
+Methods: A task that is repeated multiple times within a program, and is separated out from the main program to make it easier to repeat without compromising code length.
+Naming Conventions: A set of guidelines that define how characters should be used with regards to naming classes, variables, and 
+Objects: An individual version of a class
+Polymorphism: The idea that objects can be classified as multiple different things
+Properties: Attributes that store and modify the data involved in an object
+Refactoring:
+Skeleton:
+Static: A property that all instances of a class share
+Subclass: A class that inherits from another class.
+Superclass: A class that many classes inherit from.
+UML: A universal way to represent a programming project by its classes, methods, and properties.
+Visibility: Defines whether an attribute is publically accessible (public) or must be modified through methods (private) by classes outside of its scope.
